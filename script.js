@@ -1,11 +1,11 @@
-// Console log to check if the JS file is connected
+// Console log to make sure JS is working
 console.log("AppsAndBeyond live and interactive!");
 
-// Example: simple hover effect for all project links
-const links = document.querySelectorAll(".project-link");
-links.forEach(link => {
+// Example: alert when clicking project links
+const projectLinks = document.querySelectorAll(".project-link");
+projectLinks.forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault(); // prevents broken links for now
-    alert(`You clicked on ${link.textContent}`);
+    alert(`You clicked: ${link.textContent}`);
   });
 });
