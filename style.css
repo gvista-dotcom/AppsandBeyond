@@ -1,17 +1,19 @@
-/* ------------------------------
-   Global Styles
---------------------------------*/
+/* ---------------------------------
+   COLOR VARIABLES
+   Easy to change colors in one place
+-----------------------------------*/
 :root {
-  --primary-color: #2c3e50; /* Dark blue-gray */
-  --secondary-color: #18bc9c; /* Soft teal */
-  --accent-color: #f39c12; /* Soft orange for highlights */
-  --bg-color: #f5f5f5; /* Light background */
-  --card-bg: #ffffff; /* Card background */
-  --text-color: #333333; /* Main text */
-  --link-color: #18bc9c; /* Link color */
-  --link-hover: #f39c12; /* Hover color for links */
+  --primary-color: #2c3e50;   /* dark blue for headings */
+  --secondary-color: #18bc9c; /* soft teal for highlights */
+  --accent-color: #f39c12;    /* soft orange for hover effects */
+  --bg-color: #f5f5f5;        /* light background */
+  --card-bg: #fff;             /* background of project cards */
+  --text-color: #333;          /* main text color */
+  --link-color: #18bc9c;       /* link color */
+  --link-hover: #f39c12;       /* link hover color */
 }
 
+/* GLOBAL STYLES */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,20 +21,14 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body background and general padding */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.6;
-  padding: 2rem;
   text-align: center;
+  padding: 2rem;
 }
 
-/* HEADER STYLING */
-header {
-  margin-bottom: 3rem;
-}
-
+/* HEADER STYLES */
 header h1 {
   color: var(--primary-color);
   font-size: 2.5rem;
@@ -44,89 +40,67 @@ header p {
   font-size: 1.2rem;
 }
 
-/* PROJECTS SECTION */
+/* PROJECT SECTION */
 .projects-section h2 {
-  color: var(--primary-color);
   margin-bottom: 2rem;
 }
 
-/* CONTAINER FOR PROJECT CARDS */
+/* PROJECT CARDS CONTAINER */
 .projects-container {
   display: flex;
-  flex-wrap: wrap; /* allows wrapping on mobile */
+  flex-wrap: wrap;   /* cards stack on small screens */
   justify-content: center;
   gap: 1.5rem;
 }
 
-/* INDIVIDUAL PROJECT CARD */
+/* INDIVIDUAL CARD STYLES */
 .project-card {
   background-color: var(--card-bg);
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  flex: 1 1 250px; /* responsive card width */
+  flex: 1 1 250px;  /* card grows/shrinks responsively */
   max-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* HOVER EFFECTS FOR CARD */
+/* CARD HOVER EFFECT */
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* PROJECT TITLE */
-.project-card h3 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-/* PROJECT DESCRIPTION */
-.project-card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
-/* PROJECT LINK */
+/* LINKS IN CARDS */
 .project-link {
   display: inline-block;
   text-decoration: none;
   color: var(--link-color);
-  font-weight: bold;
   border: 2px solid var(--link-color);
   padding: 0.4rem 0.8rem;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* LINK HOVER EFFECT */
 .project-link:hover {
   background-color: var(--link-color);
   color: #fff;
 }
 
-/* FOOTER STYLING */
+/* FOOTER */
 footer {
   margin-top: 3rem;
-  color: #777777;
+  color: #777;
   font-size: 0.9rem;
 }
 
-/* ------------------------------
-   MEDIA QUERIES (RESPONSIVE)
---------------------------------*/
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  body {
-    padding: 1rem;
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   header h1 {
     font-size: 2rem;
-  }
-
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
   }
 }
