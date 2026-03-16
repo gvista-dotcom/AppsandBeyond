@@ -6,6 +6,6 @@ const projectLinks = document.querySelectorAll(".project-link");
 projectLinks.forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault(); // prevents broken links for now
-    alert(`You clicked: ${link.textContent}`);
+    alert(`You clicked a work in progress: ${link.textContent}`);
   });
 });
