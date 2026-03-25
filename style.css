@@ -21,6 +21,15 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ---------------------------------
+   LAYOUT CONTAINER
+   Keeps content centered and not too wide
+-----------------------------------*/
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
