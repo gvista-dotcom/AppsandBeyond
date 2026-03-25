@@ -13,7 +13,9 @@
   --link-hover: #f39c12;       /* link hover color */
 }
 
-/* GLOBAL STYLES */
+/* ---------------------------------
+   GLOBAL STYLES
+-----------------------------------*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,10 +39,22 @@ body {
   padding: 2rem 1rem; /* less side padding for mobile */
 }
 
-/* HEADER STYLES */
+/* ---------------------------------
+   HEADER STYLES
+-----------------------------------*/
+header h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
 /* ---------------------------------
    NAVIGATION BAR
-   Styles the top menu links
 -----------------------------------*/
 nav {
   margin-top: 1rem;
@@ -64,61 +78,45 @@ nav {
   color: var(--accent-color);
 }
 
-
-header h1 {
-  color: var(--primary-color);
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  color: var(--secondary-color);
-  font-size: 1.2rem;
-}
 /* ---------------------------------
    PROJECT SECTION
 -----------------------------------*/
 .projects-section h2 {
   margin-bottom: 2rem;
 }
+
 /* ---------------------------------
    SECTION SPACING
-   Adds space between sections
 -----------------------------------*/
 section {
   margin-top: 3rem;
 }
 
-/* PROJECT CARDS CONTAINER */
+/* ---------------------------------
+   PROJECT CARDS
+-----------------------------------*/
 .projects-container {
   display: flex;
-  flex-wrap: wrap;   /* cards stack on small screens */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
 }
 
-/* INDIVIDUAL CARD STYLES */
 .project-card {
   background-color: var(--card-bg);
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  flex: 1 1 250px;  /* card grows/shrinks responsively */
+  flex: 1 1 250px;
   max-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ------ CARD HOVER EFFECT -------- */
-      /*.project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-         }*/
 .project-card:hover {
   transform: translateY(-8px) scale(1.02); /* smoother lift */
   box-shadow: 0 12px 20px rgba(0,0,0,0.2);
 }
 
-/* LINKS IN CARDS */
 .project-link {
   display: inline-block;
   text-decoration: none;
@@ -134,14 +132,18 @@ section {
   color: #fff;
 }
 
-/* FOOTER */
+/* ---------------------------------
+   FOOTER
+-----------------------------------*/
 footer {
   margin-top: 3rem;
   color: #777;
   font-size: 0.9rem;
 }
 
-/* RESPONSIVE DESIGN */
+/* ---------------------------------
+   RESPONSIVE DESIGN
+-----------------------------------*/
 @media (max-width: 768px) {
   .projects-container {
     flex-direction: column;
@@ -152,9 +154,9 @@ footer {
     font-size: 2rem;
   }
 }
+
 /* ---------------------------------
    DARK MODE SUPPORT
-   Automatically applies if user prefers dark mode
 -----------------------------------*/
 @media (prefers-color-scheme: dark) {
   :root {
