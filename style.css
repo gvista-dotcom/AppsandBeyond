@@ -34,10 +34,37 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem; /* less side padding for mobile */
 }
 
 /* HEADER STYLES */
+/* ---------------------------------
+   NAVIGATION BAR
+   Styles the top menu links
+-----------------------------------*/
+nav {
+  margin-top: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+
 header h1 {
   color: var(--primary-color);
   font-size: 2.5rem;
@@ -48,10 +75,18 @@ header p {
   color: var(--secondary-color);
   font-size: 1.2rem;
 }
-
-/* PROJECT SECTION */
+/* ---------------------------------
+   PROJECT SECTION
+-----------------------------------*/
 .projects-section h2 {
   margin-bottom: 2rem;
+}
+/* ---------------------------------
+   SECTION SPACING
+   Adds space between sections
+-----------------------------------*/
+section {
+  margin-top: 3rem;
 }
 
 /* PROJECT CARDS CONTAINER */
@@ -73,10 +108,14 @@ header p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* CARD HOVER EFFECT */
+/* ------ CARD HOVER EFFECT -------- */
+      /*.project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+         }*/
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transform: translateY(-8px) scale(1.02); /* smoother lift */
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
 }
 
 /* LINKS IN CARDS */
@@ -111,5 +150,16 @@ footer {
 
   header h1 {
     font-size: 2rem;
+  }
+}
+/* ---------------------------------
+   DARK MODE SUPPORT
+   Automatically applies if user prefers dark mode
+-----------------------------------*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #eee;
   }
 }
