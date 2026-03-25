@@ -27,17 +27,15 @@ projectLinks.forEach(link => {
   link.addEventListener("click", (e) => {
 
     // ---------------------------------
-    // PREVENT DEFAULT LINK BEHAVIOR
-    // Stops the page from navigating (useful while links are placeholders "#")
+    // Only block links that are placeholders
+    // Check the link's href attribute
+    // If it's "#", it means the link is just a placeholder
     // ---------------------------------
-    e.preventDefault();
+    if (link.getAttribute("href") === "#") {
+      e.preventDefault(); // prevents navigation
+      alert(`You clicked a work in progress: ${link.textContent}`);
+    }
 
-    // ---------------------------------
-    // SHOW ALERT MESSAGE
-    // Displays which project was clicked
-    // link.textContent gets the text inside the link
-    // ---------------------------------
-    alert(`You clicked a work in progress: ${link.textContent}`);
   });
 
 });
