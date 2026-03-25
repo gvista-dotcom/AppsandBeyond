@@ -1,92 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-    
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AppsAndBeyond</title>
 
-  <!-- Link to our stylesheet (style.css) -->
+  <!-- Improve accessibility -->
+  <meta name="description" content="AppsAndBeyond - Building apps and learning along the way.">
+
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css">
-
-  
-<!-- Improve accessibility -->
-  <meta name="description" content="AppsAndBeyond - Building apps, breaking things, and figuring it out 🚀.">
-
-  
 </head>
 <body>
-  <!-- HEADER: Your site title and tagline -->
-  <header>
-    <h1>AppsAndBeyond</h1>
-    <p>Building apps today, learning as I go along.</p>
 
-     <!-- NAVIGATION BAR -->
-   <nav>
-    <section id="projects" class="projects-section">
-    <section id="contact">
-          <h2>Contact</h2>
-          <p>Feel free to reach out or follow my work:</p>
-          <a href="https://github.com/AppsandBeyond" target="_blank">GitHub</a>
-     </section> 
-     <ul class="nav-links">
-       <li><a href="#">Home</a></li>
-       <li><a href="#">Projects</a></li>
+  <!-- HEADER -->
+  <header class="container">
+    <h1>AppsAndBeyond</h1>
+    <p>Building apps, breaking things, and figuring it out 🚀</p>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-  </ul>
-   </nav>
-   <header class="container"> 
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- MAIN CONTENT: Project cards -->
-  <main>
-    <section class="projects-section">
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
       <h2>My Projects</h2>
       <div class="projects-container">
-        <!-- Each project card -->
+
         <div class="project-card">
-          <h3> App 1</h3>
-          <p>A simple Travel Tool</p>
+          <h3>Project 1</h3>
+          <p>A simple description of what I did for Project 1</p>
           <a href="#" class="project-link">View Demo</a>
         </div>
 
         <div class="project-card">
-          <h3>App 2 </h3>
-          <p>Grocery Shopping List Tool</p>
+          <h3>Project 2</h3>
+          <p>Another project I’m experimenting with.</p>
           <a href="#" class="project-link">View Demo</a>
         </div>
 
         <div class="project-card">
-          <h3>App 3</h3>
-          <p>Task Tracker Tool</p>
+          <h3>Project 3</h3>
+          <p>Testing ideas and learning new skills.</p>
           <a href="#" class="project-link">View Demo</a>
         </div>
 
-       <div class="project-card">
+        <div class="project-card">
           <h3>Project 4</h3>
           <p>A Link to my hub</p>
-         <a href="https://github.com/AppsandBeyond" class="project-link" target="_blank">
+          <a href="https://github.com/AppsandBeyond" class="project-link" target="_blank">View Demo</a>
         </div>
-     <!-- Coming Soon Project cards -->
-       <div class="project-card">
+
+        <div class="project-card">
           <h3>Coming Soon</h3>
           <p>Working on something new 👀</p>
           <a href="#" class="project-link">Stay Tuned</a>
         </div>
-        
+
       </div>
     </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out or follow my work:</p>
+      <a href="https://github.com/AppsandBeyond" target="_blank">GitHub</a>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
-  <footer>
+  <footer class="container">
     <p>© 2026 AppsAndBeyond | gvista-dotcom</p>
   </footer>
 
-  <!-- Link to JavaScript -->
+  <!-- Link to JS -->
   <script src="script.js"></script>
 </body>
 </html>
